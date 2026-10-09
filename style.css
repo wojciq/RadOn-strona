@@ -4,3 +4,76 @@ Author: Antoni Wójcik
 Description: Motyw dla projektu Radon
 Version: 1.0
 */
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f5;
+    color: #18181b;
+}
+
+.site-header {
+    background-color: #09090b;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.site-nav a {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover {
+    color: white;
+}
+
+.site-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.post-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.post-card h2 {
+    margin-top: 0;
+}
+
+.post-card h2 a {
+    color: #09090b;
+    text-decoration: none;
+}
+
+.post-card h2 a:hover {
+    text-decoration: underline;
+}
