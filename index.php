@@ -66,7 +66,7 @@
         </div>
         <div class="footer-contact">
             <p>Napisz do nas maila!</p>
-            <a href="mailto:radon@twojauczelnia.edu.pl">radon@twojauczelnia.edu.pl</a>
+            <a href="mailto:kn.radon@pwr.edu.pl">kn.radon@pwr.edu.pl</a>
         </div>
     </div>
     
