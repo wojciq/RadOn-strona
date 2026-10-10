@@ -308,7 +308,7 @@ body.page-o-nas .page-title {
 /* --- STOPKA (FOOTER) --- */
 .site-footer {
     width: 100%;
-    background-color: #09090b; /* Ciemne tło dopasowane do nagłówka */
+    background-color: #000000; /* Ciemne tło dopasowane do nagłówka */
     padding: 3rem 2rem 2rem;
     color: #ffffff;
     box-sizing: border-box;
@@ -334,6 +334,8 @@ body.page-o-nas .page-title {
 
 .footer-nav a:hover {
     color: #18c281;
+    transform: scale(1.05);
+
 }
 
 .footer-divider {
@@ -383,8 +385,9 @@ body.page-o-nas .page-title {
 }
 
 .footer-contact a:hover {
-    color: #18c281;
+    color: #148a5d;
 }
+
 
 .footer-socials {
     display: flex;
@@ -408,7 +411,7 @@ body.page-o-nas .page-title {
 }
 
 .social-icon:hover {
-    background-color: #18c281;
+    background-color: #148a5d;
     transform: translateY(-3px);
 }
 

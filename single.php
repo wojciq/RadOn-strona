@@ -24,7 +24,6 @@
                 <div class="post-meta">
                     <span class="author">Autor: <?php the_author(); ?></span> | 
                     <span class="date">Data: <?php the_date(); ?></span>
-                    <!-- Tu w przyszlosci dodamy licznik wyswietlen -->
                 </div>
 
                 <div class="post-content">
