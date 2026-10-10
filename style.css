@@ -1,6 +1,6 @@
 /*
 Theme Name: Radon Theme
-Author: Antoni Wójcik
+Author: Antoni Wójcik & Gabriela Mindur
 Description: Motyw dla projektu Radon
 Version: 1.0
 */
@@ -13,17 +13,32 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #132626; 
-    color: #eaddce; 
+    color: #eaddce;
+    
+    /* Wstaw tutaj ścieżkę do tego super zdjęcia z elektrownią! */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('images/natło.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Tło stoi w miejscu, treść się przewija */
+
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .site-header {
-        background-color: #09090b;
-    color: white;
-    padding: 1rem 2rem;
+    background-color: transparent !important; 
+    border-bottom: none !important; /* usuwa pasek, jak lepiej z nim to wywal tą linijke*/
+    padding: 1.5rem 2rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+    /* Opcjonalnie: jeśli chcesz, by menu "pływało" przy scrollowaniu */
+    position: sticky; 
+    top: 0px;
+    z-index: 100;
 }
 
 .site-header h1 {
@@ -62,8 +77,21 @@ color: #eaddce;
 
 .site-content {
     max-width: 1000px;
+    width: 100%;
     margin: 3rem auto;
-    padding: 0 1.5rem;
+    padding: 3rem;
+    background-color: #132626; 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
+
+    flex-grow: 1;
+}
+
+
+body.page .site-content {
+    background-color: rgba(19, 38, 38, 0.6); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .page-title {
