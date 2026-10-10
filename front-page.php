@@ -13,7 +13,7 @@
     <div class="hero-section">
         <header class="site-header transparent">
             <div class="logo">
-                <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo Radon" class="site-logo">
             </div>
             <nav class="site-nav uppercase-nav">
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
@@ -22,8 +22,8 @@
 
         <!-- Treść na środku zdjęcia -->
         <div class="hero-content">
-            <h1>asdsadasdasd</h1>
-            <p>dsadsadsadsa</p>
+            <h1>Koło Naukowe RadON</h1>
+            <p>Promieniujemy pasją do nauki!</p>
         </div>
     </div>
 
