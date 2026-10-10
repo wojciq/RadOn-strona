@@ -18,21 +18,12 @@ body {
 }
 
 .site-header {
-    background-color: rgba(13, 26, 26, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(24, 194, 129, 0.7);
-    padding: 1.5rem 2rem;
-    
-    /* Zmiany poniżej: */
+        background-color: #09090b;
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: row; /* Elementy w jednym rzędzie */
-    justify-content: space-between; /* Rozsuwa logo (lewo) i nawigację (prawo) */
-    align-items: center; /* Wyrównuje je w pionie */
-    
-    position: sticky; 
-    top: 0;
-    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .site-header h1 {
