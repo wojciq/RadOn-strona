@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?v=<?php echo time(); ?>">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-    
-    <!-- Sekcja Hero (Zdjęcie w tle + Menu na wierzchu) -->
-    <div class="hero-section">
-        <header class="site-header transparent">
-            <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo Radon" class="site-logo">
+<body class="page-o-nas">
+    <header class="site-header">
+        <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <nav class="site-nav">
+            <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
+        </nav>
+    </header>
+
+<main class="site-content" style="max-width: 1200px; margin: 50px auto; padding: 20px;">
+    <?php 
+    if ( have_posts() ) : 
+        while ( have_posts() ) : the_post(); ?>
+            <h1 class="page-title"><?php the_title(); ?></h1>
+            <div class="entry-content">
+                <?php the_content(); ?>
             </div>
-            <nav class="site-nav uppercase-nav">
-                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
-            </nav>
-        </header>
-
-        <!-- Treść na środku zdjęcia -->
-        <div class="hero-content">
-            <h1>Koło Naukowe RadON</h1>
-            <p>Promieniujemy pasją do nauki!</p>
-        </div>
-    </div>
-
-    <!-- Główna treść strony (jeśli dodasz jakiś tekst w panelu) -->
-    <main class="site-content">
-        <?php
-        while ( have_posts() ) : the_post();
-            the_content();
-        endwhile;
-        ?>
-    </main>
-    <footer class="site-footer">
+        <?php endwhile; 
+    endif; 
+    ?>
+</main>
+<footer class="site-footer">
     <nav class="footer-nav">
         <a href="#">Strona Główna</a>
         <a href="#">O nas</a>

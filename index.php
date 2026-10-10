@@ -48,6 +48,35 @@
         </div>
     </main>
 
+    <footer class="site-footer">
+    <nav class="footer-nav">
+        <a href="#">Strona Główna</a>
+        <a href="#">O nas</a>
+        <a href="#">Projekty</a>
+        <a href="#">Aktualności</a>
+    </nav>
+    
+    <hr class="footer-divider">
+    
+    <div class="footer-main">
+        <div class="footer-logo">
+            <a href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo Koła Naukowego RadON" class="footer-logo-img">
+        </a>
+        </div>
+        <div class="footer-contact">
+            <p>Napisz do nas maila!</p>
+            <a href="mailto:radon@twojauczelnia.edu.pl">radon@twojauczelnia.edu.pl</a>
+        </div>
+    </div>
+    
+    <div class="footer-socials">
+        <!-- Tymczasowe okrągłe przyciski tekstowe (można je potem zamienić na ikonki SVG) -->
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">IG</a>
+    </div>
+</footer>
+
     <?php wp_footer(); ?>
 </body>
 </html>
