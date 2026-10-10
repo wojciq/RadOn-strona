@@ -27,18 +27,13 @@ body {
 }
 
 .site-header {
-    background-color: transparent !important; 
-    border-bottom: none !important; /* usuwa pasek, jak lepiej z nim to wywal tą linijke*/
+    background-color: transparent !important;   
     padding: 1.5rem 2rem;
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
     align-items: center; 
     
-    /* Opcjonalnie: jeśli chcesz, by menu "pływało" przy scrollowaniu */
-    position: sticky; 
-    top: 0px;
-    z-index: 100;
 }
 
 .site-header h1 {
