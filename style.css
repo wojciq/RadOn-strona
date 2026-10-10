@@ -267,10 +267,12 @@ color: #eaddce;
 }
 .site-header {
     width: 100%;
-    max-width: 100%; /* Przywracamy paskowi pełną szerokość, żeby kreska szła przez całość */
-    padding-left: calc((100% - 1000px) / 2); /* Spychamy zawartość do środka z lewej strony */
-    padding-right: calc((100% - 1000px) / 2); /* Spychamy zawartość do środka z prawej strony */
-    box-sizing: border-box; /* Zapobiega zepsuciu szerokości strony */
+    max-width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Delikatna jasna linia na całej szerokości */
+    background-color: #0a0a0a; /* Zapewnia, że samo menu jest nieprzezroczyste */
+    padding-left: calc((100% - 1000px) / 2);
+    padding-right: calc((100% - 1000px) / 2);
+    box-sizing: border-box;
 }
 .hero-content h1 {
     font-family: 'Kanit', sans-serif;
@@ -282,4 +284,141 @@ color: #eaddce;
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
     text-transform: none;
+}
+/* --- Wygląd TYLKO dla zakładki "O nas" --- */
+body.page-o-nas {
+    background-image: url('images/natło.jpg'); /* Wpisz tu dokładną nazwę swojego zdjęcia z folderu images */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: #0d1a17; 
+}
+
+body.page-o-nas .site-content {
+    margin: 0 auto; /* Pasek przyklejony do górnego menu */
+    padding: 3rem 1.5rem;
+    background-color: rgba(19, 38, 38, 0.85); /* Ciemnozielony kolor z przezroczystością */
+    min-height: 100vh; /* Pasek do samego dołu ekranu */
+    box-sizing: border-box;
+}
+body.page-o-nas .page-title {
+    text-align: center;
+}
+
+/* --- STOPKA (FOOTER) --- */
+.site-footer {
+    width: 100%;
+    background-color: #09090b; /* Ciemne tło dopasowane do nagłówka */
+    padding: 3rem 2rem 2rem;
+    color: #ffffff;
+    box-sizing: border-box;
+    margin-top: 5rem; /* Odstęp od treści strony */
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #eaddce;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #18c281;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact p {
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    color: #d1dada;
+}
+
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #18c281;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #18c281;
+    transform: translateY(-3px);
+}
+
+.footer-logo-img {
+    height: 100px; /* Zmień tę wartość, jeśli logo ma być większe (np. 80px) lub mniejsze */
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-img:hover {
+    transform: scale(1.05); /* Delikatne powiększenie po najechaniu myszką */
 }
