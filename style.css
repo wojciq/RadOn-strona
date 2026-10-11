@@ -5,35 +5,37 @@ Description: Motyw dla projektu Radon
 Version: 1.0
 */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 body {
-    font-family: system-ui, -apple-system, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
     color: #eaddce;
-    
-    /* Wstaw tutaj ścieżkę do tego super zdjęcia z elektrownią! */
     background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('images/natło.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Tło stoi w miejscu, treść się przewija */
-
-    display: flex; 
+    background-attachment: fixed;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 .site-header {
-    background-color: transparent !important;   
+    width: 100%;
+    max-width: 100%;
     padding: 1.5rem 2rem;
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
-    
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+}
+
+.site-header.transparent {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-header h1 {
@@ -42,25 +44,25 @@ body {
 }
 
 .site-header h1 a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .site-nav ul {
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 2.5rem;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: flex-end; /* Wyrównanie linków do prawej */
-    flex-wrap: wrap; 
-    gap: 2.5rem; 
 }
 
 .site-nav a {
-color: #eaddce;
+    color: #eaddce;
     text-decoration: none;
     font-weight: 500;
-    text-transform: uppercase; /* Zgodnie z surowym, naukowym stylem */
+    text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 0.9rem;
     transition: color 0.3s ease;
@@ -70,27 +72,33 @@ color: #eaddce;
     color: #18c281;
 }
 
+.site-nav.uppercase-nav a {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+}
+
+.site-logo {
+    height: 80px;
+    min-width: 80px;
+    display: block;
+}
+
 .site-content {
     max-width: 1000px;
     width: 100%;
     margin: 3rem auto;
     padding: 3rem;
-    background-color: #132626; 
+    background-color: #132626;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
-
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
     flex-grow: 1;
-}
-
-
-body.page .site-content {
-    background-color: rgba(19, 38, 38, 0.6); 
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px);
+    box-sizing: border-box;
 }
 
 .page-title {
-    color: #18c281; /* Neonowa zieleń */
+    color: #18c281;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 2rem;
@@ -104,21 +112,21 @@ body.page .site-content {
     gap: 2rem;
 }
 
-/* --- Stylizacja Karty Posta --- */
 .post-card {
-    background: #1a3333; /* Nieco jaśniejsze tło dla karty */
+    background: #1a3333;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    border-top: 4px solid #feca0a; /* Żółty akcent ze znaczka radioaktywności */
+    border-top: 4px solid #feca0a;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .post-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(24, 194, 129, 0.15); /* Delikatna zielona poświata */
+    box-shadow: 0 8px 25px rgba(24, 194, 129, 0.15);
     border-top: 4px solid #18c281;
 }
 
@@ -167,7 +175,7 @@ body.page .site-content {
 
 .read-more {
     display: inline-block;
-    color: #feca0a; /* Żółty przycisk */
+    color: #feca0a;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -180,31 +188,8 @@ body.page .site-content {
     color: #18c281;
 }
 
-.post-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.post-card h2 {
-    margin-top: 0;
-}
-
-.post-card h2 a {
-    color: #09090b;
-    text-decoration: none;
-}
-
-.post-card h2 a:hover {
-    text-decoration: underline;
-}
-
-/* --- Style dla pojedynczego posta (single.php) --- */
-
 .post-full {
-    background: white;
+    background: #ffffff;
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -236,16 +221,14 @@ body.page .site-content {
     margin: 1.5rem 0;
 }
 
-/* --- Sekcja Hero ze zdjęciem --- */
 .hero-section {
-    /* Tymczasowe zdjęcie z ciemnym filtrem - podmienisz na swoje! */
     background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6)), url('images/temp1.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 80vh; /* Zajmuje 80% wysokości ekranu */
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #ffffff;
 }
 
 .hero-content {
@@ -257,85 +240,71 @@ body.page .site-content {
     text-align: center;
 }
 
+.hero-content h1,
+.hero-content p {
+    font-family: 'Kanit', sans-serif;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* --- Nowy wygląd Menu (Wielkie litery, przezroczystość) --- */
-.site-header.transparent {
-    background-color: transparent; /* Przezroczyste tło nałożone na zdjęcie */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-}
-
-.site-nav.uppercase-nav a {
-    text-transform: uppercase; /* Wymusza duże litery */
-    font-size: 0.85rem;
-    letter-spacing: 1.5px; /* Rozstrzelone litery jak na screenie */
-    padding: 0.5rem 1rem;
-}
-
-.logo a {
-    font-weight: 900;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.site-logo {
-    height: 80px;
-    min-width: 80px;
-    display: block;
-}
-.site-header {
-    width: 100%;
-    max-width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Delikatna jasna linia na całej szerokości */
-    background-color: #0a0a0a; /* Zapewnia, że samo menu jest nieprzezroczyste */
-    padding-left: calc((100% - 1000px) / 2);
-    padding-right: calc((100% - 1000px) / 2);
-    box-sizing: border-box;
-}
-.hero-content h1 {
-    font-family: 'Kanit', sans-serif;
     font-weight: 700;
     text-transform: none;
+    letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-family: 'Kanit', sans-serif;
     font-weight: 400;
     text-transform: none;
 }
-/* --- Wygląd TYLKO dla zakładki "O nas" --- */
+
 body.page-o-nas {
-    background-image: url('images/natło.jpg'); /* Wpisz tu dokładną nazwę swojego zdjęcia z folderu images */
+    background-image: url('images/natło.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-color: #0d1a17; 
+    background-color: #0d1a17;
 }
 
 body.page-o-nas .site-content {
-    margin: 0 auto; /* Pasek przyklejony do górnego menu */
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
     padding: 3rem 1.5rem;
-    background-color: rgba(19, 38, 38, 0.85); /* Ciemnozielony kolor z przezroczystością */
-    min-height: 100vh; /* Pasek do samego dołu ekranu */
+    background-color: rgba(19, 38, 38, 0.85);
+    min-height: 100vh;
     box-sizing: border-box;
-}
-body.page-o-nas .page-title {
-    text-align: center;
+    border-radius: 16px;
 }
 
-/* --- STOPKA (FOOTER) --- */
+body.page-o-nas .page-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+body.page-o-nas .entry-content {
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    body.page-o-nas .site-content {
+        margin-top: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    body.page-o-nas .entry-content {
+        max-width: 100%;
+    }
+}
+
 .site-footer {
     width: 100%;
-    background-color: #000000; /* Ciemne tło dopasowane do nagłówka */
+    background-color: #000000;
     padding: 3rem 2rem 2rem;
     color: #ffffff;
     box-sizing: border-box;
-    margin-top: 5rem; /* Odstęp od treści strony */
+    margin-top: 5rem;
 }
 
 .footer-nav {
@@ -358,7 +327,6 @@ body.page-o-nas .page-title {
 .footer-nav a:hover {
     color: #18c281;
     transform: scale(1.05);
-
 }
 
 .footer-divider {
@@ -377,13 +345,6 @@ body.page-o-nas .page-title {
     margin: 0 auto 3rem;
     flex-wrap: wrap;
     gap: 2rem;
-}
-
-.footer-logo h2 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    color: #ffffff;
 }
 
 .footer-contact {
@@ -411,15 +372,13 @@ body.page-o-nas .page-title {
     color: #148a5d;
 }
 
-
 .footer-socials {
     display: flex;
-    justify-content: center; /* Ikony wyśrodkowane poziomo */
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-/* Przyciski społecznościowe - okrągłe, wyśrodkowana ikona wewnątrz */
 .social-btn {
     display: flex;
     align-items: center;
@@ -427,41 +386,38 @@ body.page-o-nas .page-title {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    color: #ffffff; /* Ikony białe */
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-btn i {
-    color: #ffffff; /* Ikona wewnątrz kółka biała */
+    color: #ffffff;
     font-size: 1.2rem;
     line-height: 0;
 }
 
-/* Brandowe kolory */
 .social-instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .social-facebook {
-    background: #1877F2; /* Facebook blue */
+    background: #1877F2;
 }
 
-/* Hover: delikatne powiększenie */
 .social-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-
 .footer-logo-img {
-    height: 100px; /* Zmień tę wartość, jeśli logo ma być większe (np. 80px) lub mniejsze */
+    height: 100px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
 .footer-logo-img:hover {
-    transform: scale(1.05); /* Delikatne powiększenie po najechaniu myszką */
+    transform: scale(1.05);
 }
