@@ -18,6 +18,15 @@
             <a href="mailto:kn.radon@pwr.edu.pl">kn.radon@pwr.edu.pl</a>
         </div>
     </div>
+
+    <div class="footer-socials">
+        <a class="social-btn social-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="social-btn social-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+        </a>
+    </div>
 </footer>
 
 <?php wp_footer();  ?>
