@@ -15,7 +15,7 @@
         </nav>
     </header>
 
-<main class="site-content" style="max-width: 1200px; margin: 50px auto; padding: 20px;">
+<main class="site-content">
     <?php 
     if ( have_posts() ) : 
         while ( have_posts() ) : the_post(); ?>
